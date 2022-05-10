@@ -10,9 +10,7 @@
     <!-- Favicon -->
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,10 +25,8 @@
     <!-- Start of Header -->
     <header>
       <div class="navbar">
-        <figure>
-          <!-- <a href="#"><img src="img/Logo.png" alt="Logo All About Music" /></a> -->
+        <figure class="logo">
           <a href="#"><img src="img/Logo.svg" alt="Logo All About Music" /></a>
-          <!-- <img src="img/Logo.png" alt="Logo All About Music" /> -->
         </figure>
         <nav>
           <ul>
@@ -46,15 +42,19 @@
       <div class="hero">
         <figure>
           <blockquote>
-            <p>Without music, life would be a mistake.</p>
+            <h1 class="quote">Without music, life would be a mistake.</h1>
           </blockquote>
           <figcaption>- Friedrich Nietzsche</figcaption>
         </figure>
-        <figure>
-          <img src="img/pexels-sound-on-3756943 1-large.png" title="A girl listening Music" alt="Girl has a headphone on and enjoying music." />
+        <a class="btn" href="#">Sign up for free</a>
+        <!-- <div class="home-page-btn">
+        </div> -->
+        <picture class="hero-image">
+          <source media="(min-width: 768px)" srcset="img/home-page/pexels-sound-on-3756943-1-large-4-5.png" />
+          <source srcset="img/home-page/pexels-sound-on-3756943-1-large-4-5-mobile.png" />
+          <img src="img/home-page/pexels-sound-on-3756943-1-large-4-5.png" title="A girl listening Music" alt="Girl has a headphone on and enjoying music." height="400" width="500" />
           <figcaption hidden>Photo by <a href="https://www.pexels.com/photo/woman-in-gray-sweater-wearing-white-headphones-3756943/">Sound On</a> on Pexel</figcaption>
-        </figure>
-        <a href="#">Sign up for free</a>
+        </picture>
       </div>
     </header>
     <!-- End of Header -->
