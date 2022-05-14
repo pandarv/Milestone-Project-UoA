@@ -1,5 +1,126 @@
 @import url("styles.css");
 
-header .hero figure {
-  grid-column: 1 / -1;
+header {
+  height: 100vh;
+  padding: 0;
+}
+
+.hero {
+  display: block;
+  background-image: url(../img/chris-ainsworth-irk6DwN9giQ-unsplash.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-bg-color);
+  background-blend-mode: luminosity;
+  /* max-width: var(--max-width); */
+  /* transform: scale(110%); */
+}
+
+/*******************
+------- Main -------
+********************/
+
+main {
+  margin-block: 8rem;
+  margin-inline: auto;
+  width: min(100% - 1rem, var(--width));
+}
+
+h3 {
+  text-align: center;
+  font-weight: 500;
+}
+
+h3,
+h5 {
+  text-transform: uppercase;
+}
+
+.hr {
+  height: 2px;
+  background-color: var(--secondary-text);
+  /* background-color: hsl(var(--secondary-text) / 0.5); */
+  opacity: 0.25;
+  margin-block-end: 2rem;
+}
+main p {
+  margin-block: 4rem;
+  font-weight: 400;
+  text-indent: 3rem;
+  line-height: 1.5;
+}
+
+main section:last-child {
+  width: min(100% - 30%, var(--width));
+  margin-inline: auto;
+}
+
+main ul li {
+  margin: 1rem;
+}
+
+main .flex-concert-heading .date,
+main .flex-concert-heading .city,
+main .flex-concert-heading .venue {
+  flex-basis: 25%;
+}
+
+main .flex-concert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .flex-concert-heading,
+main section:last-child .hidden {
+  display: none;
+}
+
+.date,
+.city,
+.venue {
+  flex-basis: 25%;
+}
+
+.venue {
+  flex-shrink: 0;
+}
+
+.ticket {
+  flex-grow: 0;
+}
+
+.concert-info .btn {
+  padding-block: 0.6rem;
+  padding-inline: 4rem;
+  letter-spacing: 0.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignment .ticket {
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  main .flex-concert-heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  main section:last-child .hidden {
+    display: block;
+  }
+  main .flex-concert {
+    flex-direction: row;
+  }
+  .concert-info .btn {
+    padding-block: 0.6rem;
+    padding-inline: 1.4rem;
+  }
+  .hr {
+    margin-block-end: 1rem;
+  }
 }
