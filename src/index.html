@@ -25,19 +25,25 @@
     <!-- Start of Header -->
     <header>
       <div class="navbar">
-        <figure class="logo">
-          <a href="#"><img src="img/Logo.svg" alt="Logo All About Music" /></a>
-        </figure>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Album</a></li>
-            <li><a href="tour.html">Tour</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <a href="#">Sign up / Login</a>
+        <div class="nav-links">
+          <figure class="logo">
+            <a href="index.html"><img src="img/Logo.svg" alt="Logo All About Music" /></a>
+          </figure>
+          <nav>
+            <ul>
+              <li><a class="current" href="index.html">Home</a></li>
+              <li><a href="#">Album</a></li>
+              <li><a href="tour.html">Tour</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <a class="btn btn-clr" href="#">Sign up / Login</a>
+          <!-- Hamburger - Fries Style -->
+          <div class="mobile-menu">
+            <div class="hamburger-fries"></div>
+          </div>
+        </div>
       </div>
       <div class="hero">
         <figure>
@@ -104,10 +110,10 @@
         <!-- <div class="footer-nav"> -->
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Album</a></li>
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="tour.html">Tour</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
@@ -137,7 +143,7 @@
           </li>
         </ul>
       </div>
-      <p><small>&copy; Copyright © 2022 Figure Drawing Inc.</small></p>
+      <p><small>Copyright &copy; 2022 Figure Drawing Inc.</small></p>
     </footer>
     <!-- End of Footer -->
     <script src="js/scripts.js" defer></script>
