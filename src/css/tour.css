@@ -1,0 +1,5 @@
+@import url("styles.css");
+
+header .hero figure {
+  grid-column: 1 / -1;
+}

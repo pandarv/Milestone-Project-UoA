@@ -1,0 +1,65 @@
+@import url(styles.css);
+
+header {
+  height: 100vh;
+  /* border: 2px solid black; */
+}
+
+.hero {
+  display: block;
+  background-image: url(../img/pexels-olenka-sergienko-3686769.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-bg-color);
+  background-blend-mode: luminosity;
+  /* max-width: var(--max-width); */
+  /* transform: scale(110%); */
+}
+/*******************
+------- Main -------
+********************/
+
+main {
+  margin-block: 8rem;
+  margin-inline: auto;
+  /* padding-inline: 1rem; */
+  width: min(100% - 1rem, var(--width));
+  /* max-width: var(--width); */
+}
+
+h3,
+h4 {
+  text-align: center;
+  font-weight: 500;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+h4 {
+  margin: 4rem 3rem;
+}
+
+main .para {
+  padding-inline: 1rem;
+  columns: 1;
+  gap: 4rem;
+}
+
+main p {
+  margin-block-end: 2rem;
+  font-weight: 400;
+  text-indent: 3rem;
+  line-height: 1.5;
+}
+
+main p:last-child {
+  margin-block-end: 0;
+}
+
+@media screen and (min-width: 768px) {
+  main .para {
+    columns: 2;
+  }
+}

@@ -25,27 +25,31 @@
     <!-- Start of Header -->
     <header>
       <div class="navbar">
-        <figure>
-          <a href="#"><img src="img/Logo.svg" alt="Logo All About Music" /></a>
-          <!-- <img src="img/Logo.png" alt="Logo All About Music" /> -->
-        </figure>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Album</a></li>
-            <li><a class="current" href="tour.html">Tour</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <a href="#">Sign up / Login</a>
+        <div class="nav-links">
+          <figure class="logo">
+            <a href="index.html"><img src="img/Logo.svg" alt="Logo All About Music" /></a>
+          </figure>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Album</a></li>
+              <li><a class="current" href="tour.html">Tour</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <a class="btn btn-clr" href="#">Sign up / Login</a>
+          <!-- Hamburger - Fries Style -->
+          <div class="mobile-menu">
+            <div class="hamburger-fries"></div>
+          </div>
+        </div>
       </div>
-      <div class="hero">
-        <figure>
-          <img src="img/chris-ainsworth-irk6DwN9giQ-unsplash.jpg" title="A female singer" alt="." />
-          <figcaption hidden>Photo by <a href="https://unsplash.com/photos/irk6DwN9giQ"> Chris Ainsworth </a> on Unsplash</figcaption>
-        </figure>
-      </div>
+      <div class="hero"></div>
+      <!-- <figure>
+        <img src="img/chris-ainsworth-irk6DwN9giQ-unsplash.jpg" title="A female singer" alt="." />
+        <figcaption hidden>Photo by <a href="https://unsplash.com/photos/irk6DwN9giQ"> Chris Ainsworth </a> on Unsplash</figcaption>
+      </figure> -->
     </header>
     <!-- End of Header -->
 
@@ -95,42 +99,45 @@
 
     <!-- Start of Footer -->
     <footer>
-      <nav>
+      <div class="footer">
+        <!-- <div class="footer-nav"> -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Album</a></li>
+            <li><a href="tour.html">Tour</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><a href="#">In Concert</a></li>
+            <li><a href="#">Join Team</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </nav>
+        <!-- </div> -->
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Album</a></li>
-          <li><a href="#">Tour</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </li>
         </ul>
-      </nav>
-      <nav>
-        <ul>
-          <li><a href="#">In Concert</a></li>
-          <li><a href="#">Join Team</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
-      </nav>
-      <ul>
-        <li>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        </li>
-      </ul>
-      <p><small>&copy; Copyright © 2022 Figure Drawing Inc.</small></p>
+      </div>
+      <p><small>Copyright &copy; 2022 Figure Drawing Inc.</small></p>
     </footer>
-    <!-- End of Footer -->
     <script src="js/scripts.js" defer></script>
   </body>
 </html>
