@@ -1,0 +1,117 @@
+@import url("styles.css");
+header {
+  height: 100px;
+  /* border: 2px solid black; */
+  /* opacity: 0.5; */
+}
+
+/*******************
+------- Main -------
+********************/
+
+main {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  margin-block-end: 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.contact-image {
+  height: calc(90vh - 100px);
+  grid-row: 1 / 2;
+  background-image: url(../img/pexels-karolina-grabowska-4476633.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-bg-color);
+  background-blend-mode: luminosity;
+  transform: scaleX(-1);
+}
+
+h3,
+form {
+  margin: auto;
+}
+
+h3 {
+  margin-block-start: 2.4rem;
+  padding-block: 3rem;
+}
+
+form {
+  width: min(100% - 2rem, 800px);
+  padding-inline: 2rem;
+  margin-block-end: 4rem;
+}
+form div {
+  width: 100%;
+  padding-block-end: 2.4rem;
+}
+form input,
+form textarea {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  background-color: var(--white-color);
+  width: 100%;
+  margin-block-start: 0.8rem;
+  padding: 1rem;
+  transition: border 0.3s ease-out;
+}
+label {
+  /* color: var(--white-color); */
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+form input:hover,
+form textarea:hover {
+  border: 1px solid var(--tertiary-text);
+}
+
+form div:last-child {
+  padding-block-end: 0;
+  display: grid;
+  place-content: center;
+}
+
+button {
+  margin-block-start: 2rem;
+  border: none;
+}
+
+button.btn {
+  padding-inline: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr minmax(65%, 1fr);
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+  }
+  .contact-image {
+    height: 100%;
+    /* height: calc(100% - 100px); */
+    overflow: hidden;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+  }
+  h3 {
+    margin-block: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 1;
+  }
+  form {
+    /* height: 100%; */
+    /* color: hsl(0, 37%, 68%); */
+    background-color: hsla(0, 61%, 84%, 0.7);
+    padding-block: 4rem;
+    border-radius: 0.4rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    z-index: 1;
+  }
+}
