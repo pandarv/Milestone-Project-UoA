@@ -20,3 +20,16 @@ mobileMenu.addEventListener("click", () => {
 //     }
 //   });
 // });
+
+/**** Contact Page Validation ****/
+// const form = document.querySelector("form");
+
+// const formInfo = {
+//   name: {
+//     nameInput: ,
+//   }
+// }
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+// });

@@ -4,6 +4,12 @@ header {
   height: 100vh;
 }
 
+span {
+  font-size: 2.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 /*******************
 ------- Main -------
 ********************/
@@ -64,17 +70,17 @@ main section div::before {
 main section div::after {
   content: " ";
   background-color: var(--brand-color);
-  width: 15rem;
+  width: 18rem;
   height: calc(2rem + 2rem);
   position: absolute;
   z-index: -1;
 }
 
 main section:nth-of-type(2) div::after {
-  width: 18rem;
+  width: 22rem;
 }
 main section:nth-of-type(3) div::after {
-  width: 10rem;
+  width: 11rem;
 }
 
 main section img {

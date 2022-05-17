@@ -59,7 +59,7 @@ form textarea {
   transition: border 0.3s ease-out;
 }
 label {
-  /* color: var(--white-color); */
+  /* color: hsl(var(--white-color), 0.5); */
   text-transform: uppercase;
   font-size: 0.8rem;
 }
