@@ -17,8 +17,8 @@
 
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="css/reset.css" />
-    <!-- <link rel="stylesheet" href="css/index.css" /> -->
-    <link rel="stylesheet" href="css/construction.css" />
+    <link rel="stylesheet" href="css/news.css" />
+    <!-- <link rel="stylesheet" href="css/construction.css" /> -->
 
     <title>All About Music</title>
   </head>
@@ -50,7 +50,19 @@
     <!-- End of Header -->
 
     <!-- Start of Main section -->
-    <main></main>
+    <main>
+      <form action="#" method="post" class="search">
+        <input type="search" name="search" id="search" placeholder="Search artists..." />
+        <button class="btn" type="submit">Search</button>
+      </form>
+
+      <section class="news-wrapper">
+        <h5>Searched News</h5>
+        <ul class="news-headlines">
+          <li class="news-headline horizontal"></li>
+        </ul>
+      </section>
+    </main>
     <!-- End of Main section -->
 
     <!-- Start of Footer -->
@@ -95,7 +107,7 @@
       <p><small>Copyright &copy; 2022 Figure Drawing Inc.</small></p>
     </footer>
     <!-- End of Footer -->
-    <script src="js/construction.js"></script>
+    <script src="js/news.js"></script>
     <script src="js/scripts.js" defer></script>
   </body>
 </html>

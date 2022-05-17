@@ -40,6 +40,13 @@ main section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: var(--primary-bg-color);
+  background-blend-mode: luminosity;
+  transition: background-color 0.5s ease-in-out;
+}
+
+main section:hover {
+  background-color: transparent;
 }
 
 main section div {
@@ -67,6 +74,7 @@ main section div::before {
   width: 1.4rem;
   height: calc(2rem + 2rem);
 }
+
 main section div::after {
   content: " ";
   background-color: var(--brand-color);
@@ -74,6 +82,12 @@ main section div::after {
   height: calc(2rem + 2rem);
   position: absolute;
   z-index: -1;
+  /* transform: translateX(100%); */
+  transition: background-color 0.25s ease-in-out;
+}
+
+main section div:hover::after {
+  background-color: var(--white-color);
 }
 
 main section:nth-of-type(2) div::after {

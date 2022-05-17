@@ -1,0 +1,41 @@
+@import url("styles.css");
+
+header {
+  height: 100px;
+}
+
+/*******************
+------- Main -------
+********************/
+
+main {
+  width: min(100% - 2rem, var(--width));
+  margin-inline: auto;
+  margin-block: 6rem;
+}
+
+main button.btn {
+  border: none;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+form {
+  margin-inline: auto;
+  margin-block-end: 2rem;
+  /* width: 80%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+main input {
+  flex-basis: 75%;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  background-color: var(--white-color);
+  width: 100%;
+  padding: 1rem;
+  transition: border 0.3s ease-out;
+}
