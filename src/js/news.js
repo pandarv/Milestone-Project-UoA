@@ -19,7 +19,7 @@ search.addEventListener("submit", function (e) {
       },
     };
 
-    fetch(`https://bing-news-search1.p.rapidapi.com/news/search?q=${searchVal}&freshness=Day&textFormat=Raw&safeSearch=Off`, options)
+    fetch(`https://bing-news-search1.p.rapidapi.com/news/search?q=${searchVal}&freshness=Day&textFormat=Raw&safeSearch=Off&sortBy=Date&count=100&cc=en-US&category=Entertainment_Music`, options)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -30,20 +30,71 @@ search.addEventListener("submit", function (e) {
       })
       .then((data) => {
         if (data) {
-          let dataApiExtract = {
-            category: data.value.map((item) => item.category),
-            datePublished: data.value.map((item) => item.datePublished),
-            urlLink: data.value.map((item) => item.url),
-            newsHeadline: data.value.map((item) => item.name),
-          };
+          // document.querySelector("main li").parentElement.remove();
+
+          /*** Removes searched History ***/
+          const liList = document.querySelectorAll("main ul li");
+          liList.forEach((item) => item.remove());
+
+          // if (headlineList.hasChildNodes()) {
+          //   let childList = headlineList.childNodes;
+          //   childList.remove();
+          //   // childList.forEach()
+          //   console.log(childList);
+          // }
+          // headlineList.removeChild(liList);
+          // console.log(data);
+
+          /***** Try Later After project submission - Display and sorting  *****/
+          // const dataApiExtract = {
+          //   category: data.value.map((item) => item.category),
+          //   datePublished: data.value.map((item) => item.datePublished),
+          //   urlLink: data.value.map((item) => item.url),
+          //   newsHeadline: data.value.map((item) => item.name),
+          // };
+          // console.log(dataApiExtract);
+          // dataApiExtract.forEach
+          // dataApiExtract.datePublished.sort((a, b) => a - b);
+
           //   let jsonDate = new Date().toJSON();
-          //   console.log(dataApiExtract.newsHeadline);
+          // console.log(dataApiExtract.newsHeadline);
           //   console.log(new Date(dataApiExtract.datePublished).toUTCString());
-          dataApiExtract.datePublished.forEach((item) => console.log(new Date(item).toUTCString()));
+
+          // const dateArr = dataApiExtract.datePublished.map((item) => new Date(item).toUTCString());
+          // dateArr.sort((a, b) => a - b);
+          // console.log(dateArr);
+
           //   let backToDate = ;
           //   console.log(data);
           //   console.log(dataApiExtract.category, backToDate);
+
           document.querySelector("h5").innerText = `Searched News`;
+          const dataArr = data.value;
+          console.log(dataArr);
+
+          /**** Working as List on webpage ****/
+
+          dataArr.forEach((item) => {
+            // console.log(item);
+            const lis = document.createElement("li");
+            const a = document.createElement("a");
+            const span = document.createElement("span");
+            const date = new Date(item.datePublished).toUTCString();
+            // console.log(date);
+            const modifiedDate = new Date(date);
+            let day = modifiedDate.getDate();
+            let month = modifiedDate.getMonth() + 1;
+            let year = modifiedDate.getFullYear();
+            a.setAttribute("href", item.url);
+            a.setAttribute("target", "_blank");
+            a.innerText = item.name;
+            span.innerText = `${month} / ${day} / ${year}`;
+            // span.innerText = `${date}`;
+            lis.appendChild(a);
+            lis.appendChild(span);
+            headlineList.appendChild(lis);
+          });
+
           //   let lis = document.createElement("li");
           //   let a = document.createElement("a");
           //   a.setAttribute("href", dataApiExtract.urlLink);

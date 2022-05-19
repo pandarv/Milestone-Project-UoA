@@ -39,3 +39,38 @@ main input {
   padding: 1rem;
   transition: border 0.3s ease-out;
 }
+
+main section ul {
+  /* border: 1px solid red; */
+  padding-block-start: 3rem;
+  padding-inline: 2rem;
+}
+
+main section ul li {
+  background-color: var(--white-color);
+  margin-block-end: 0.2rem;
+  padding-inline: 0.8rem;
+  /* padding: 0.8rem; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+main section ul li a {
+  line-height: 1.7;
+  width: 80%;
+  color: var(--secondary-text);
+  padding: 0.8rem;
+}
+
+main section ul li span {
+  color: var(--secondary-text);
+  width: 6rem;
+  flex-shrink: 0;
+}
+
+main section ul li:last-child {
+  margin-block-end: 0;
+  /* padding-bottom: 0; */
+}

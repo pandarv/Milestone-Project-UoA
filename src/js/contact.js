@@ -5,7 +5,7 @@ const emailInput = document.querySelector("#email");
 const subjectInput = document.querySelector("#subject");
 const commentInput = document.querySelector("#comment");
 
-const nameRegEx = /^([a-z]( ){0,}){1,25}$/i;
+const nameRegEx = /^[a-z\s]{1,25}$/i;
 const phoneRegEx = /^([2-9]\d{2})-(\d{3})-(\d{4})$/;
 const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -54,11 +54,13 @@ function validation(input, regEx) {
   //     input.classList.remove("error");
   //     input.classList.remove("accept");
   //   }
-  if (regEx.test(input.value) === false && inputTrim === "") {
-    console.log(typeof regEx.test(inputTrim));
-    console.log(typeof input.value);
+  if (regEx.test(input.value) === false || inputTrim === "") {
+    // console.log(typeof regEx.test(inputTrim));
+    // console.log(typeof input.value);
+    input.classList.remove("accept");
     input.classList.add("error");
   } else {
+    input.classList.remove("error");
     input.classList.add("accept");
   }
 }
