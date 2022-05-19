@@ -30,8 +30,39 @@ search.addEventListener("submit", function (e) {
       })
       .then((data) => {
         if (data) {
-          console.log(data);
+          let dataApiExtract = {
+            category: data.value.map((item) => item.category),
+            datePublished: data.value.map((item) => item.datePublished),
+            urlLink: data.value.map((item) => item.url),
+            newsHeadline: data.value.map((item) => item.name),
+          };
+          //   let jsonDate = new Date().toJSON();
+          //   console.log(dataApiExtract.newsHeadline);
+          //   console.log(new Date(dataApiExtract.datePublished).toUTCString());
+          dataApiExtract.datePublished.forEach((item) => console.log(new Date(item).toUTCString()));
+          //   let backToDate = ;
+          //   console.log(data);
+          //   console.log(dataApiExtract.category, backToDate);
           document.querySelector("h5").innerText = `Searched News`;
+          //   let lis = document.createElement("li");
+          //   let a = document.createElement("a");
+          //   a.setAttribute("href", dataApiExtract.urlLink);
+          //   a.setAttribute("target", "_blank");
+          //   a.textContent = dataApiExtract.newsHeadline;
+          //   lis.appendChild(a);
+          //   console.log(dataApiExtract.newsHeadline.length);
+          //   headlineList.appendChild(lis);
+
+          //   data.value.forEach((element) => {
+          //     console.log(element);
+          // let lis = document.createElement("li");
+          // let a = document.createElement("a");
+          // a.setAttribute("href", dataApiExtract.urlLink);
+          // a.setAttribute("target", "_blank");
+          // a.textContent = dataApiExtract.newsHeadline;
+          // lis.appendChild(a);
+          // headlineList.appendChild(lis);
+          //   });
         }
       })
       .finally(() => {

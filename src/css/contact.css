@@ -38,6 +38,24 @@ h3 {
   padding-block: 3rem;
 }
 
+main small {
+  text-transform: uppercase;
+  /* visibility: hidden; */
+}
+
+/* main small {
+  color: red;
+  visibility: hidden;
+} */
+
+form input.error {
+  outline: 2px solid red;
+}
+
+form input.accept {
+  outline: 2px solid lightgreen;
+}
+
 form {
   width: min(100% - 2rem, 800px);
   padding-inline: 2rem;

@@ -53,26 +53,31 @@
     <main>
       <div class="contact-image"></div>
       <h3>Contact</h3>
-      <form action="#" method="post">
-        <div>
+      <form action="#" method="post" id="contact-form">
+        <div class="form-crtl">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="Name" />
+          <input type="text" name="name" id="name" placeholder="Full Name" />
+          <small>Please type your name</small>
         </div>
-        <div>
+        <div class="form-crtl">
           <label for="number">Phone Number</label>
           <input type="tel" name="telephone" id="telephone" placeholder="000-000-0000" />
+          <small>222-222-2222 format and 10 digits</small>
         </div>
-        <div>
+        <div class="form-crtl">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="email@email.com" />
+          <input type="text" name="email" id="email" placeholder="email@email.com" />
+          <small>example@example.com</small>
         </div>
-        <div>
+        <div class="form-crtl">
           <label for="subject">Subject</label>
           <input type="text" name="subject" id="subject" placeholder="Subject" />
+          <small>Subject is empty</small>
         </div>
-        <div>
+        <div class="form-crtl">
           <label for="comment">Comment</label>
           <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Message here..."></textarea>
+          <small>Minimum 100 words.</small>
         </div>
         <div>
           <button class="btn" type="submit">Send</button>
@@ -124,5 +129,6 @@
     </footer>
     <!-- End of Footer -->
     <script src="js/scripts.js" defer></script>
+    <script src="js/contact.js " defer></script>
   </body>
 </html>
