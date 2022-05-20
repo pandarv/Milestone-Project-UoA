@@ -1,8 +1,6 @@
 @import url("styles.css");
 header {
   height: 100px;
-  /* border: 2px solid black; */
-  /* opacity: 0.5; */
 }
 
 /*******************
@@ -12,7 +10,6 @@ header {
 main {
   max-width: var(--max-width);
   margin-inline: auto;
-  /* margin-block-end: 6rem; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: calc(100vh - 100px);
@@ -42,6 +39,4 @@ main h3 {
   padding-block: 2rem;
   border-radius: 0.8rem;
   margin-inline: 1rem;
-  /* color: transparent; */
-  /* mix-blend-mode: difference; */
 }

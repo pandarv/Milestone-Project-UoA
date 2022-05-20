@@ -1,5 +1,4 @@
 const search = document.querySelector(".search");
-// const searchBtn = document.querySelector(".search-btn");
 const input = document.querySelector("main input");
 const headlineList = document.querySelector(".news-headlines");
 

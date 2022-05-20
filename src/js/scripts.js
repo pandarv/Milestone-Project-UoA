@@ -11,12 +11,3 @@ function toggleHamMenu() {
 mobileMenu.addEventListener("click", () => {
   toggleHamMenu();
 });
-
-headerNavLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    // if any link contains .active class
-    if (headerNav.classList.contains("active")) {
-      toggleHamMenu();
-    }
-  });
-});
