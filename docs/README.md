@@ -1,6 +1,10 @@
 #WCB Web Dev Template README
 
-- All About Music is a University Milestone project which can be used by the artists on which music album, news, concert photographs, and future tours information and ticketing features can be added.
+# Arvind Pandit
+
+## Milestone Project
+
+- Milestone project name is All About Music which can be used by the artists or a website where people can listen the music, and get the information about future concerts or artist tour, concert photographs, and ticketing features.
 - Album, In Concert and Join Team pages are under progress. Also Sign up / Login is expected to be built on Modal concept.
 - All the images used for this website are taken from Pexel and Unsplash.
 
@@ -18,3 +22,9 @@
 #### Tour page:
 
 - Photo by Chris Ainsworth on Unsplash
+
+## Bugs
+
+- Clicking outside the Hamburger Menu doesn't closes menu.
+- Sign up / login button doesn't work.
+- footer links are not in focus when use tap button

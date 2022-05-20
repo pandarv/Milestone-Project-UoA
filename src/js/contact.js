@@ -8,13 +8,12 @@ const commentInput = document.querySelector("#comment");
 const nameRegEx = /^[a-z\s]{1,25}$/i;
 const phoneRegEx = /^([2-9]\d{2})-(\d{3})-(\d{4})$/;
 const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const commentRegEx = /^[\w\d!@#\$%\^\&*\)\(+=._-]{1,500}$/gi;
+const commentRegEx = /^[\w\d!\s@#\$%\^\&*\)\(+=._-]{1,500}$/i;
 
-const inputVal = [fullName, telInput, emailInput, subjectInput, commentInput];
+// const inputVal = [fullName, telInput, emailInput, subjectInput, commentInput];
 
 formSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
-
   validation(fullName, nameRegEx);
   validation(telInput, phoneRegEx);
   validation(emailInput, emailRegEx);

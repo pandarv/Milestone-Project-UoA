@@ -86,7 +86,9 @@ label {
 }
 
 form input:hover,
-form textarea:hover {
+form input:focus,
+form textarea:hover,
+form textarea:focus {
   border: 1px solid var(--tertiary-text);
 }
 

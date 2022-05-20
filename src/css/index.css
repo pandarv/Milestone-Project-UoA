@@ -45,7 +45,8 @@ main section {
   transition: background-color 0.5s ease-in-out;
 }
 
-main section:hover {
+main section:hover,
+main section:focus {
   background-color: transparent;
 }
 
@@ -61,7 +62,7 @@ main section div {
   top: -7%;
 }
 main section h3 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 0;
   padding: 0.8rem 2rem;
   color: var(--primary-text);
@@ -75,19 +76,24 @@ main section div::before {
   height: calc(2rem + 2rem);
 }
 
-main section div::after {
-  content: " ";
+.btn-skew > a h3 {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.btn-skew > a {
   background-color: var(--brand-color);
   width: 18rem;
   height: calc(2rem + 2rem);
-  position: absolute;
-  z-index: -1;
-  /* transform: translateX(100%); */
   transition: background-color 0.25s ease-in-out;
 }
 
-main section div:hover::after {
+.btn-skew > a:focus,
+.btn-skew > a:hover {
   background-color: var(--white-color);
+  /* transition: background-color 0.5s ease-in-out; */
 }
 
 main section:nth-of-type(2) div::after {

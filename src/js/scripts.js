@@ -12,24 +12,11 @@ mobileMenu.addEventListener("click", () => {
   toggleHamMenu();
 });
 
-// headerNavLinks.forEach((link) => {
-//   link.addEventListener("click", () => {
-//     // if any link contains .active class
-//     if (headerNav.classList.contains("active")) {
-//       toggleHamMenu();
-//     }
-//   });
-// });
-
-/**** Contact Page Validation ****/
-// const form = document.querySelector("form");
-
-// const formInfo = {
-//   name: {
-//     nameInput: ,
-//   }
-// }
-
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-// });
+headerNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // if any link contains .active class
+    if (headerNav.classList.contains("active")) {
+      toggleHamMenu();
+    }
+  });
+});
