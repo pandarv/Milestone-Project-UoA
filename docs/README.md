@@ -27,4 +27,5 @@
 
 - Clicking outside the Hamburger Menu doesn't closes menu.
 - Sign up / login button doesn't work.
+- Contact page - when all the fields are filled out and press submit doesn't reset the form.
 - footer links are not in focus when use tap button

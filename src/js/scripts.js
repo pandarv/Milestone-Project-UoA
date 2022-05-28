@@ -1,6 +1,6 @@
 const mobileMenu = document.querySelector(".mobile-menu");
 const headerNav = document.querySelector("header nav ul");
-const headerNavLinks = document.querySelectorAll("header nav ul a");
+// const headerNavLinks = document.querySelectorAll("header nav ul a");
 
 /**** Header Hamburger Menu ****/
 function toggleHamMenu() {
@@ -10,4 +10,9 @@ function toggleHamMenu() {
 
 mobileMenu.addEventListener("click", () => {
   toggleHamMenu();
+});
+headerNav.addEventListener("click", (e) => {
+  if (e.target !== "headerNav") {
+    headerNav.classList.remove("active");
+  }
 });
