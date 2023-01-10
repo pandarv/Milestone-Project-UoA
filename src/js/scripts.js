@@ -1,5 +1,7 @@
+
 const mobileMenu = document.querySelector(".mobile-menu");
 const headerNav = document.querySelector("header nav ul");
+const hamFries = document.querySelector('.hamburger-fries')
 // const headerNavLinks = document.querySelectorAll("header nav ul a");
 
 /**** Header Hamburger Menu ****/
@@ -8,11 +10,12 @@ function toggleHamMenu() {
   headerNav.classList.toggle("active");
 }
 
-mobileMenu.addEventListener("click", () => {
-  toggleHamMenu();
-});
-headerNav.addEventListener("click", (e) => {
-  if (e.target !== "headerNav") {
-    headerNav.classList.remove("active");
+window.addEventListener('click', (e) => {
+  // console.log(e.target)
+  if(e.target === mobileMenu || e.target === hamFries) {
+    toggleHamMenu()
+  }else if(e.target !== headerNav) {
+            mobileMenu.classList.remove("active");
+        headerNav.classList.remove("active");
   }
-});
+})
